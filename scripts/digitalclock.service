@@ -1,0 +1,13 @@
+[Unit]
+Description=Digital Clock Program
+After=multi-user.target
+
+[Service]
+Type=forking
+User=root
+WorkingDirectory=/usr/sbin
+ExecStart=/usr/sbin/digitalclock
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
